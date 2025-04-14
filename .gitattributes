@@ -1,0 +1,2 @@
+LAB2/assets/block.tscn filter=lfs diff=lfs merge=lfs -text
+LAB2/assets/blocksLibrary.tres filter=lfs diff=lfs merge=lfs -text

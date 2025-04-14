@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://fonts/ThatNogoFontCasual.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/Redkost Comic.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://button-go-return.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 120
+outline_size = 8
+outline_color = Color( 0.388235, 0.678431, 0.0705882, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 72
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0.294118, 0.501961, 0.294118, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+custom_fonts/font = SubResource( 1 )
+text = "YOU WIN!"
+align = 1
+valign = 1
+
+[node name="button-go-return" type="Button" parent="."]
+margin_left = 450.0
+margin_top = 500.0
+margin_right = 850.0
+margin_bottom = 582.0
+custom_colors/font_color = Color( 0.901961, 0.901961, 0.913725, 1 )
+custom_colors/font_color_hover = Color( 0.678431, 0.94902, 0.823529, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "PLAY again"
+flat = true
+icon_align = 1
+script = ExtResource( 3 )
+
+[connection signal="pressed" from="button-go-return" to="button-go-return" method="_on_buttongoreturn_pressed"]
